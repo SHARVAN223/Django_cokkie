@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<button><a href="{% url 'get_cookie' %}">get_cokkie</a></button>
+<button><a href="{% url 'delete_cookie' %}">delete_cookie</a></button>
+<button><a href="{% url 'registration' %}">Register agin</a></button>
+<h1>{{msg1}}</h1>
+
+    NAME: {{data.name}}<br><br>
+    EMAIL: {{data.email}}<br><br>
+    PASSWORD: {{data.password}}<br><br>
+    NUMBER: {{data.number}}<br><br>
+    QUALIFICATION: {{data.qualification}}<br><br>
+    GENDER: {{data.gender}}<br><br>
+    STATE: {{data.state}}<br><br>
+    IMAGE:{{data.image}}
+
+<!-- <div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-6 col-lg-5">
+
+            <div class="card border-0 shadow-sm">
+                <div class="card-body p-4">
+
+                    <h3 class="text-center mb-4">Login</h3>
+
+                    <form method="post">
+                        {% csrf_token %}
+
+                       
+                        <div class="mb-3">
+                            <label class="form-label">Email </label>
+                            <input type="email" name="email" class="form-control" placeholder="Enter email">
+                        </div>
+
+                      
+                        <div class="mb-3">
+                            <label class="form-label">Password</label>
+                            <input type="password" name="password" class="form-control" placeholder="Enter password">
+                        </div>
+
+                       
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">
+                                Login
+                            </button>
+                        </div>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div> -->
+{% endblock content %}
